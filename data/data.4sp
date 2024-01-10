@@ -1,0 +1,29 @@
+<!--step3=113-->
+					<center><h1>Visits by Center  Name and Reason<BR /><span class='smaller' >113 Visits found </span><BR /><BR /><span class='xsmall' >Centers :SV Math Lab, SV Writing Lab, DC Math Lab, DC Writing Lab<br />criteria: from 12/01/2023 to 12/15/2023, Active consultants only, Center  Name = SV Math Lab </span></h1></center>
+				<!--studline=
+		#name##addlStud#	#numVis#	#numHrs#
+-->
+<!--studline2=
+-->Name	Reason
+<!--# vis at beginning of report: 113-->SV Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemistry
+
+<!--Group1 Dif-->	Chemistry Total:		2	3.55	2	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIS/Programming
+
+<!--Group1 Dif-->	CIS/Programming Total:		5	8.47	4	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
+
+<!--Group1 Dif-->	Math Total:		93	203.53	31	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
+
+<!--Group1 Dif-->	Other Total:		11	24.38	7	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other Course Tutoring
+
+<!--Group1 Dif-->	Other Course Tutoring Total:		1	2.05	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physics
+	Physics Total:		1	5.02	1	Students
+SV Math Lab Total:			113	247.03	46	Students
+Grand Total:			<b>113</b>	247.03	<b>46</b>	Students
+
+
