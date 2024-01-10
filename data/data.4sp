@@ -1,29 +1,59 @@
-<!--step3=113-->
-					<center><h1>Visits by Center  Name and Reason<BR /><span class='smaller' >113 Visits found </span><BR /><BR /><span class='xsmall' >Centers :SV Math Lab, SV Writing Lab, DC Math Lab, DC Writing Lab<br />criteria: from 12/01/2023 to 12/15/2023, Active consultants only, Center  Name = SV Math Lab </span></h1></center>
+<!--step3=130-->
+					<center><h1>Visits by Center  Name and Reason<BR /><span class='smaller' >130 Visits found </span><BR /><BR /><span class='xsmall' >Centers :SV Math Lab, SV Writing Lab, DC Math Lab, DC Writing Lab<br />criteria: from 12/04/2023 to 12/09/2023, Active consultants only </span></h1></center>
 				<!--studline=
 		#name##addlStud#	#numVis#	#numHrs#
 -->
 <!--studline2=
 -->Name	Reason
-<!--# vis at beginning of report: 113-->SV Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+<!--# vis at beginning of report: 130-->DC Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIS/Programming
+
+<!--Group1 Dif-->	CIS/Programming Total:		4	5.91	2	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
+
+<!--Group1 Dif-->	Math Total:		18	41.75	12	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
+
+<!--Group1 Dif-->	Other Total:		1	0.17	1	Students
+DC Math Lab Total:			23	47.84	15	Students
+DC Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workshop
+
+<!--Group1 Dif-->	Workshop Total:		1	1.52	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writing
+
+<!--Group1 Dif-->	Writing Total:		24	206.60	16	Students
+DC Writing Lab Total:			25	208.12	17	Students
+SV Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemistry
 
 <!--Group1 Dif-->	Chemistry Total:		2	3.55	2	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIS/Programming
 
-<!--Group1 Dif-->	CIS/Programming Total:		5	8.47	4	Students
+<!--Group1 Dif-->	CIS/Programming Total:		3	4.86	2	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
 
-<!--Group1 Dif-->	Math Total:		93	203.53	31	Students
+<!--Group1 Dif-->	Math Total:		34	69.07	19	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
 
-<!--Group1 Dif-->	Other Total:		11	24.38	7	Students
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other Course Tutoring
+<!--Group1 Dif-->	Other Total:		7	18.70	5	Students
+SV Math Lab Total:			46	96.19	28	Students
+SV Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
 
-<!--Group1 Dif-->	Other Course Tutoring Total:		1	2.05	1	Students
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physics
-	Physics Total:		1	5.02	1	Students
-SV Math Lab Total:			113	247.03	46	Students
-Grand Total:			<b>113</b>	247.03	<b>46</b>	Students
+<!--Group1 Dif-->	Other Total:		3	5.84	2	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reading
+
+<!--Group1 Dif-->	Reading Total:		1	0.39	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social Sciences
+
+<!--Group1 Dif-->	Social Sciences Total:		2	2.68	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workshop
+
+<!--Group1 Dif-->	Workshop Total:		1	1.14	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writing
+	Writing Total:		29	46.99	19	Students
+SV Writing Lab Total:			36	57.06	24	Students
+Grand Total:			<b>130</b>	409.24	<b>84</b>	Students
 
 
