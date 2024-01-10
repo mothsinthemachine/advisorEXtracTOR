@@ -31,10 +31,16 @@ Process:
 	- Terminal (Windows or *nix, Mac included)
 3.	Use python to run the script. I.E., my machine uses 'python myScript.py
 
+Revisions:
+
+01/10/24 - Renamed directories as A and B (as in 'how to get from A to B'). 
+	Outputs by default to B directory as 'output.csv'.
+
+01/09/24 - Initial script and commit to GitHub private repo
 '''
 
 import sys
-import os
+import os, os.path
 
 print('AdvisorTrac Report Extractor in process...')
 
@@ -61,13 +67,14 @@ def main():
 		print('... quitting process.')
 		exit()
 
-	outfname = 'output.csv'
+	outfname = 'B\\output.csv' # Formatted for Windows directories only
 	try:
-		output = sys.argv[2]
-		if (len(output.split('.')) > 1):
-			outfname = output[0] + ".csv"
+		outputPath = sys.argv[2]
+		if (len(outputPath.split('.')) > 1):
+			os.makedirs(os.path.dirname(outputPath), exists_ok=True)
+			outfname = outputPath[0] + ".csv"
 		else:
-			outfname = output + ".csv"
+			outfname = outputPath + ".csv"
 	except:
 		print(f'Output file will be named {outfname} and stored in same folder as this script.')
 
