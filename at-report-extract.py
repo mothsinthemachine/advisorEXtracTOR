@@ -29,7 +29,13 @@ Process:
 	- Command Prompt (Windows)
 	- Powershell (Windows)
 	- Terminal (Windows or *nix, Mac included)
-3.	Use python to run the script. I.E., my machine uses 'python myScript.py
+3.	Use python to run the script.
+
+	Syntax:
+
+	> python at-report-extract.py <source (required)> <destination (optional)>
+
+4.	Profit.
 
 Revisions:
 
@@ -42,7 +48,11 @@ Revisions:
 import sys
 import os, os.path
 
-print('AdvisorTrac Report Extractor in process...')
+print()
+print('/*******************************************/')
+print('/* AdvisorTrac Report Extractor in process */')
+print('/*******************************************/')
+print()
 
 def main():
 	
@@ -58,15 +68,15 @@ def main():
 	keywords.extend(writingList)
 	keywords.extend(['Other','Grand Total'])
 
-	# Check if file and path are existent
+	# Check if input file and path are existent
+	infname = 'A\\reportOut.4sp' # Default path and name
 	try:
-		fname = sys.argv[1]
+		inputPath = sys.argv[1]
 	except:
-		print('Please enter the path and file name to use extractor.')
-		print('Syntax: python at-report-extract.py <path to file> <optional output file name>')
-		print('... quitting process.')
+		quitProcess('you did not define an input file path')
 		exit()
-
+	
+	# Default output file name and path
 	outfname = 'B\\output.csv' # Formatted for Windows directories only
 	try:
 		outputPath = sys.argv[2]
@@ -78,12 +88,10 @@ def main():
 	except:
 		print(f'Output file will be named {outfname} and stored in same folder as this script.')
 
-	if (os.path.exists(fname)):
-		f = open(fname,'r')
+	if (os.path.exists(infname)):
+		f = open(infname,'r')
 	else:
-		print('Cannot find the file. Did you enter the path and file name correctly?')
-		print('Syntax: python at-report-extract.py <path to file> <optional output file name>')
-		print('... quitting process.')
+		quitProcess('the file path does not exist')
 		exit()
 	
 	if (os.path.exists(outfname)):
@@ -161,6 +169,12 @@ def main():
 	f.close()
 	nf.close()
 	print(f'... Done. Outputted file is {outfname}.')
+
+def quitProcess(reason='unknown'):
+	print(f'Sorry, I could not understand that command. The reason is {reason}.')
+	print('Please enter the path and file name to use extractor.')
+	print('Syntax:\n\n\t> python at-report-extract.py <PATH TO 4sp FILE> [OPTIONAL OUTPUT PATH]\n')
+	print('/***** Quitting process. *****/\n')
 				
 # Run the script
 main()

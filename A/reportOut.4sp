@@ -1,59 +1,65 @@
-<!--step3=130-->
-					<center><h1>Visits by Center  Name and Reason<BR /><span class='smaller' >130 Visits found </span><BR /><BR /><span class='xsmall' >Centers :SV Math Lab, SV Writing Lab, DC Math Lab, DC Writing Lab<br />criteria: from 12/04/2023 to 12/09/2023, Active consultants only </span></h1></center>
+<!--step3=120-->
+					<center><h1>Visits by Center  Name and Reason<BR /><span class='smaller' >120 Visits found </span><BR /><BR /><span class='xsmall' >Centers :SV Math Lab, SV Writing Lab, DC Math Lab, DC Writing Lab<br />criteria: from 11/27/2023 to 12/02/2023, Active consultants only </span></h1></center>
 				<!--studline=
 		#name##addlStud#	#numVis#	#numHrs#
 -->
 <!--studline2=
 -->Name	Reason
-<!--# vis at beginning of report: 130-->DC Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+<!--# vis at beginning of report: 120-->DC Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIS/Programming
 
-<!--Group1 Dif-->	CIS/Programming Total:		4	5.91	2	Students
+<!--Group1 Dif-->	CIS/Programming Total:		7	11.41	4	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
 
-<!--Group1 Dif-->	Math Total:		18	41.75	12	Students
+<!--Group1 Dif-->	Math Total:		12	19.06	11	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
 
-<!--Group1 Dif-->	Other Total:		1	0.17	1	Students
-DC Math Lab Total:			23	47.84	15	Students
-DC Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workshop
+<!--Group1 Dif-->	Other Total:		1	1.48	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physics
 
-<!--Group1 Dif-->	Workshop Total:		1	1.52	1	Students
+<!--Group1 Dif-->	Physics Total:		3	5.64	1	Students
+DC Math Lab Total:			23	37.60	17	Students
+DC Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writing
 
-<!--Group1 Dif-->	Writing Total:		24	206.60	16	Students
-DC Writing Lab Total:			25	208.12	17	Students
+<!--Group1 Dif-->	Writing Total:		27	142.70	23	Students
+DC Writing Lab Total:			27	142.70	23	Students
 SV Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Chemistry
 
-<!--Group1 Dif-->	Chemistry Total:		2	3.55	2	Students
+<!--Group1 Dif-->	Chemistry Total:		2	8.75	2	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CIS/Programming
 
-<!--Group1 Dif-->	CIS/Programming Total:		3	4.86	2	Students
+<!--Group1 Dif-->	CIS/Programming Total:		2	2.46	2	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
 
-<!--Group1 Dif-->	Math Total:		34	69.07	19	Students
+<!--Group1 Dif-->	Math Total:		28	64.88	16	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
 
-<!--Group1 Dif-->	Other Total:		7	18.70	5	Students
-SV Math Lab Total:			46	96.19	28	Students
+<!--Group1 Dif-->	Other Total:		8	16.51	4	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other Course Tutoring
+
+<!--Group1 Dif-->	Other Course Tutoring Total:		1	2.05	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Physics
+
+<!--Group1 Dif-->	Physics Total:		2	9.27	2	Students
+SV Math Lab Total:			43	103.96	27	Students
 SV Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Languages
+
+<!--Group1 Dif-->	Languages Total:		1	2.89	1	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
 
-<!--Group1 Dif-->	Other Total:		3	5.84	2	Students
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Reading
-
-<!--Group1 Dif-->	Reading Total:		1	0.39	1	Students
+<!--Group1 Dif-->	Other Total:		6	16.25	4	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Social Sciences
 
-<!--Group1 Dif-->	Social Sciences Total:		2	2.68	1	Students
+<!--Group1 Dif-->	Social Sciences Total:		3	10.39	1	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Workshop
 
-<!--Group1 Dif-->	Workshop Total:		1	1.14	1	Students
+<!--Group1 Dif-->	Workshop Total:		1	1.29	1	Students
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writing
-	Writing Total:		29	46.99	19	Students
-SV Writing Lab Total:			36	57.06	24	Students
-Grand Total:			<b>130</b>	409.24	<b>84</b>	Students
+	Writing Total:		16	27.67	10	Students
+SV Writing Lab Total:			27	58.50	17	Students
+Grand Total:			<b>120</b>	342.77	<b>84</b>	Students
 
 
