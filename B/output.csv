@@ -1,28 +1,60 @@
-AdvisorTrac Lab and Subject Report,,,
-Dates from 11/27/2023 to 12/02/2023,Visits,Hours,Students
-
-CIS/Programming Total,7,11.41,4
-Math Total,12,19.06,11
-Other Total,1,1.48,1
-Physics Total,3,5.64,1
-DC Math Lab Total,23,37.60,17
-
-Writing Total,27,142.70,23
-DC Writing Lab Total,27,142.70,23
-
-Chemistry Total,2,8.75,2
-CIS/Programming Total,2,2.46,2
-Math Total,28,64.88,16
-Other Total,8,16.51,4
-Other Course Tutoring Total,1,2.05,1
-Physics Total,2,9.27,2
-SV Math Lab Total,43,103.96,27
-
-Languages Total,1,2.89,1
-Other Total,6,16.25,4
-Social Sciences Total,3,10.39,1
-Workshop Total,1,1.29,1
-Writing Total,16,27.67,10
-SV Writing Lab Total,27,58.50,17
-
-Grand Total,120,342.77,84
+CIS/Programming Total:
+Visits,Hours,Students
+7,11.41,4
+Math Total:
+Visits,Hours,Students
+12,19.06,11
+Other Total:
+Visits,Hours,Students
+1,1.48,1
+Physics Total:
+Visits,Hours,Students
+3,5.64,1
+DC Math Lab Total:
+Visits,Hours,Students
+23,37.60,17
+Writing Total:
+Visits,Hours,Students
+27,142.70,23
+DC Writing Lab Total:
+Visits,Hours,Students
+27,142.70,23
+Chemistry Total:
+Visits,Hours,Students
+2,8.75,2
+CIS/Programming Total:
+Visits,Hours,Students
+2,2.46,2
+Math Total:
+Visits,Hours,Students
+28,64.88,16
+Other Total:
+Visits,Hours,Students
+8,16.51,4
+Other Course Tutoring Total:
+Visits,Hours,Students
+1,2.05,1
+Physics Total:
+Visits,Hours,Students
+2,9.27,2
+SV Math Lab Total:
+Visits,Hours,Students
+43,103.96,27
+Languages Total:
+Visits,Hours,Students
+1,2.89,1
+Other Total:
+Visits,Hours,Students
+6,16.25,4
+Social Sciences Total:
+Visits,Hours,Students
+3,10.39,1
+Workshop Total:
+Visits,Hours,Students
+1,1.29,1
+SV Writing Lab Total:
+Visits,Hours,Students
+27,58.50,17
+Grand Total:
+Visits,Hours,Students
+120,342.77,84

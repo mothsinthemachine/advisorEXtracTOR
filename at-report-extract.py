@@ -1,9 +1,9 @@
 '''
-AdvisorTrac Report Extractor
-at-report-extract.py
+AdvisorTrac Report Extractor (version 2)
+at-report-extract2.py
 
 Author: Jake Sherwood (MothsInTheMachine on GitHub)
-Last Modified: Jan. 9, 2024
+Last Modified: Jan. 17, 2024
 
 Purpose:
 The purpose of this program is to take report text data from AdvisorTrac and 
@@ -29,15 +29,23 @@ Process:
 	- Command Prompt (Windows)
 	- Powershell (Windows)
 	- Terminal (Windows or *nix, Mac included)
-3.	Use python to run the script.
+3.	Use Python to run the script.
 
-	Syntax:
+	Possible Syntax:
 
 	> python at-report-extract.py <source (required)> <destination (optional)>
+
+		or
+
+	> python3 at-report-extract.py <source (required)> <destination (optional)>
 
 4.	Profit.
 
 Revisions:
+
+01/17/24 - New version completed. Renamed old version to 'at-report-extract-v1.py.'
+
+01/16/24 - Created new version of tool. WIP.
 
 01/10/24 - Renamed directories as A and B (as in 'how to get from A to B'). 
 	Outputs by default to B directory as 'output.csv'.
@@ -48,133 +56,101 @@ Revisions:
 import sys
 import os, os.path
 
-print()
-print('/*******************************************/')
-print('/* AdvisorTrac Report Extractor in process */')
-print('/*******************************************/')
-print()
+def printHeader():
+	print()
+	print('/*******************************************/')
+	print('/* AdvisorTrac Report Extractor in process */')
+	print('/*******************************************/')
+	print()
 
-def main():
-	
-	# Define departments (labs) to report on
-	labList = ['SV Math Lab','SV Writing Lab','DC Math Lab','DC Writing Lab']
-	# Define reasons that the department uses for visits
-	mathList = ['Chemistry','CIS/Programming','Math','Physics','Other Course Tutoring']
-	writingList = ['Languages','MS Office','Reading','Social Sciences','Workshop','Writing']
-	# Extend the array of keywords with previous lists and additional keywords to search for
-	keywords = []
-	keywords.extend(labList)
-	keywords.extend(mathList)
-	keywords.extend(writingList)
-	keywords.extend(['Other','Grand Total'])
-
-	# Check if input file and path are existent
-	infname = 'A\\reportOut.4sp' # Default path and name
-	try:
-		inputPath = sys.argv[1]
-	except:
-		quitProcess('you did not define an input file path')
-		exit()
-	
-	# Default output file name and path
-	outfname = 'B\\output.csv' # Formatted for Windows directories only
-	try:
-		outputPath = sys.argv[2]
-		if (len(outputPath.split('.')) > 1):
-			os.makedirs(os.path.dirname(outputPath), exists_ok=True)
-			outfname = outputPath[0] + ".csv"
-		else:
-			outfname = outputPath + ".csv"
-	except:
-		print(f'Output file will be named {outfname} and stored in same folder as this script.')
-
-	if (os.path.exists(infname)):
-		f = open(infname,'r')
-	else:
-		quitProcess('the file path does not exist')
-		exit()
-	
-	if (os.path.exists(outfname)):
-		choice = input('The output file name already exists. Do you want to overwrite it? [y/n]: ')
-		choice = choice.lower()
-		choice = choice[0]
-		while (choice != 'n') and (choice != 'y'):
-			print("Invalid choice. Please enter Y for 'Yes' and N for 'No'...")
-			choice = input('The output file name already exists. Do you want to overwrite it? [y/n]: ')
-			choice = choice.lower()
-		if (choice == 'n'):
-			print("Cancelling process. Please run command again later.")
-			exit()
-		if (choice == 'y'):
-			print(f'Confirmed overwriting previous file {outfname}.')
-			# Remove the old file
-			os.remove(outfname)
-	
-	nf = open(outfname,'w')
-
-	# Reading and writing files here
-	nf.write('AdvisorTrac Lab and Subject Report,,,\n')
-
-	for x in f:
-		found = x.find('from')
-		if (found != -1):
-			# Write the dates of the report and skip to next line
-			nf.write('Dates ' + x[found:found+29] + ',Visits,Hours,Students\n\n')
-			continue
-
-		prevList = [] # This is used for detecting duplicates
-
-		for word in keywords:
-			found = x.find(word)
-			if (found != -1):
-				y = x[found:-1].split('\t')
-				# Remove null values
-				while '' in y:
-					y.remove('')
-				# Skip header line
-				if ('Visits' in y):
-					continue
-				# R-strip the ':' from the first elements
-				y[0] = y[0].rstrip(':')
-				# Remove 'Students'
-				if ('Students' in y):
-					y.remove('Students')
-				# Skip lines less than 2 elements in length
-				if (len(y) < 2):
-					continue
-				# Skip lines where 'Math Lab' is the first element (Duplicates)
-				if (y[0] == 'Math Lab') or (y[0] == 'Math Lab Total') or (y[0] == 'Writing Lab') or (y[0] == 'Writing Lab Total'):
-					continue
-				# Remove HTML from Grand Total line
-				if (y[0] == 'Grand Total'):
-					y[1] = (y[1].replace('<b>','')).replace('</b>','')
-					y[3] = (y[3].replace('<b>','')).replace('</b>','')
-				# Compare array to previous array and skip the duplicate
-				if (prevList != []) and (prevList == y):
-					continue
-				prevList = y
-				
-				z = ','.join(y) + '\n'
-				# Add a newline character to separate lab data
-				for lab in labList:
-					w = y[0].find(lab + " Total")
-					if (w != -1):
-						z = z + '\n'
-				# Strip newline from very last line
-				if (y[0] == 'Grand Total'):
-					z = z.rstrip()
-				# Write to file
-				nf.write(z)
-	# Process completed
-	f.close()
-	nf.close()
-	print(f'... Done. Outputted file is {outfname}.')
+def printFooter():
+	print()
+	print('/*******************************************/')
+	print('/*  Qutting AdvisorTrac Report Extractor.  */')
+	print('/*******************************************/')
+	print()
 
 def quitProcess(reason='unknown'):
 	print(f'Sorry, I could not understand that command. The reason is {reason}.')
 	print('Please enter the path and file name to use extractor.')
 	print('Syntax:\n\n\t> python at-report-extract.py <PATH TO 4sp FILE> [OPTIONAL OUTPUT PATH]\n')
-	print('/***** Quitting process. *****/\n')
-				
+	printFooter()
+	quit()
+
+def main():
+	printHeader()
+
+	separator = ','
+	defaultInputPath  = 'A\\reportOut.4sp'  # The default input file path and name from AdvisorTrac
+	defaultOutputPath = 'B\\output.csv'     # The default output file path and name
+	subjectLineLabel  = '<!--Group1 Dif-->' # Distinguishes the Subject line
+	labLineLabels = ['DC Math Lab Total','DC Writing Lab Total','SV Math Lab Total','SV Writing Lab Total','Grand Total']
+	headersLine = separator.join(['Visits','Hours','Students'])
+
+	nArgs = len(sys.argv) # Number of arguments from command.
+
+	if (nArgs > 3):
+		quitProcess('the extractor cannot process excess arguments for command')
+	elif (nArgs == 1):
+		inputPath  = defaultInputPath
+		outputPath = defaultOutputPath
+	else:
+		inputPath = sys.argv[1]
+		if not (os.path.exists(inputPath)):
+			quitProcess(f'the extractor cannot find \"{inputPath}\"')
+
+	if (nArgs == 3):
+		outputPath = sys.argv[2]
+	else:
+		outputPath = defaultOutputPath
+	
+	# Verify overwriting of existing output file
+	if (os.path.exists(outputPath)):
+		inputStr = input(f'The output file \"{outputPath}\" already exists. Do you want to overwrite it? [y/n]: ')
+		choice = inputStr[0].lower()
+		while (choice != 'n') and (choice != 'y'):
+			print("Invalid choice. Please enter Y for 'Yes' and N for 'No'...")
+			inputStr = input('The output file name already exists. Do you want to overwrite it? [y/n]: ')
+			choice = inputStr[0].lower()
+		
+		if (choice == 'n'):
+			print("Cancelling process. Please run command again later.")
+			printFooter()
+			exit()
+		
+		if (choice == 'y'):
+			print(f'Confirmed overwriting previous file \"{outputPath}\".')
+		
+	
+	print(f'Extractor will process file found at \"{inputPath}\" and output to \"{outputPath}\".')
+	inputFile  = open(inputPath,'r')
+	outputFile = open(outputPath,'w')
+
+	for line in inputFile:
+		writeToFile = False
+		if (line.find(subjectLineLabel) != -1):
+			cleanedList = list(filter(lambda str: str != '', line[len(subjectLineLabel):-9].split('\t')))
+			writeToFile = True
+		else:
+			for label in labLineLabels:
+				if (line.find(label) != -1):
+					cleanedList = list(filter(lambda str: str != '', line[:-9].split('\t')))
+					# Remove HTML tags from Grand Total line
+					if (label == 'Grand Total'):
+						cleanedList[1] = cleanedList[1].replace('<b>','').replace('</b>','')
+						cleanedList[3] = cleanedList[3].replace('<b>','').replace('</b>','')
+					writeToFile = True
+		
+		if (writeToFile):
+			outputFile.write(cleanedList[0] + '\n')
+			outputFile.write(headersLine + '\n')
+			outputFile.write(separator.join(cleanedList[1:]) + '\n')
+
+	print("Process completed successfully.")
+	inputFile.close()
+	outputFile.close()
+	printFooter()
+	exit()
+
 # Run the script
 main()

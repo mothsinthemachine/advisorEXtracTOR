@@ -1,9 +1,9 @@
 '''
-AdvisorTrac Report Extractor (version 2)
-at-report-extract2.py
+AdvisorTrac Report Extractor
+at-report-extract.py
 
 Author: Jake Sherwood (MothsInTheMachine on GitHub)
-Last Modified: Jan. 16, 2024
+Last Modified: Jan. 9, 2024
 
 Purpose:
 The purpose of this program is to take report text data from AdvisorTrac and 
