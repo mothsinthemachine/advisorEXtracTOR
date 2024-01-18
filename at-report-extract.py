@@ -84,6 +84,7 @@ def main():
 	defaultInputPath  = 'A\\reportOut.4sp'  # The default input file path and name from AdvisorTrac
 	defaultOutputPath = 'B\\output.csv'     # The default output file path and name
 	subjectLineLabel  = '<!--Group1 Dif-->' # Distinguishes the Subject line
+	dateLineLabel = 'from'					# Distinguishes the date
 	labLineLabels = ['DC Math Lab Total','DC Writing Lab Total','SV Math Lab Total','SV Writing Lab Total','Grand Total']
 	headersLine = separator.join(['Visits','Hours','Students'])
 
@@ -128,7 +129,11 @@ def main():
 
 	for line in inputFile:
 		writeToFile = False
-		if (line.find(subjectLineLabel) != -1):
+		if (line.find(dateLineLabel) != -1):
+			found = line.find(dateLineLabel)
+			outputFile.write('Dates ' + line[found:found+29] + '\n\n')
+			continue
+		elif (line.find(subjectLineLabel) != -1):
 			cleanedList = list(filter(lambda str: str != '', line[len(subjectLineLabel):-9].split('\t')))
 			writeToFile = True
 		else:
