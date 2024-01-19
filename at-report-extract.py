@@ -3,7 +3,7 @@ AdvisorTrac Report Extractor (version 2)
 at-report-extract2.py
 
 Author: Jake Sherwood (MothsInTheMachine on GitHub)
-Last Modified: Jan. 17, 2024
+Last Modified: Jan. 18, 2024
 
 Purpose:
 The purpose of this program is to take report text data from AdvisorTrac and 
@@ -78,7 +78,7 @@ def quitProcess(reason='unknown'):
 	quit()
 
 def main():
-	printHeader()
+	
 
 	separator = ','
 	defaultInputPath  = 'A\\reportOut.4sp'  # The default input file path and name from AdvisorTrac
@@ -87,6 +87,8 @@ def main():
 	dateLineLabel = 'from'					# Distinguishes the date
 	labLineLabels = ['DC Math Lab Total','DC Writing Lab Total','SV Math Lab Total','SV Writing Lab Total','Grand Total']
 	headersLine = separator.join(['Visits','Hours','Students'])
+
+	printHeader()
 
 	nArgs = len(sys.argv) # Number of arguments from command.
 
