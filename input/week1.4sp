@@ -1,0 +1,32 @@
+<!--step3=6-->
+					<center><h1>Visits by Center  Name and Reason<BR /><span class='smaller' >6 Visits found </span><BR /><BR /><span class='xsmall' >Centers :SV Math Lab, SV Writing Lab, DC Math Lab, DC Writing Lab<br />criteria: from 05/29/2023 to 06/01/2023, Active consultants only </span></h1></center>
+				<!--studline=
+		#name##addlStud#	#numVis#	#numHrs#
+-->
+<!--studline2=
+-->Name	Reason
+<!--# vis at beginning of report: 6-->DC Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
+
+<!--Group1 Dif-->	Math Total:		1	0.36	1	Students
+DC Math Lab Total:			1	0.36	1	Students
+DC Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
+
+<!--Group1 Dif-->	Other Total:		2	7.02	2	Students
+DC Writing Lab Total:			2	7.02	2	Students
+SV Math Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Math
+
+<!--Group1 Dif-->	Math Total:		1	2.47	1	Students
+SV Math Lab Total:			1	2.47	1	Students
+SV Writing Lab			Visits	Hours	Date	Time In	Time Out	Tot Hrs
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Other
+
+<!--Group1 Dif-->	Other Total:		1	1.18	1	Students
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Writing
+	Writing Total:		1	2.22	1	Students
+SV Writing Lab Total:			2	3.40	2	Students
+Grand Total:			<b>6</b>	13.27	<b>6</b>	Students
+
+
