@@ -89,6 +89,13 @@ def quitProcess(reason='unknown'):
 	quit()
 
 
+def bar(width,_symbol='-'):
+	str = ''
+	for i in range(width):
+		str += _symbol
+	return str
+
+
 def defineKeywords(_labLabels=[]):
 	keywords = []
 	if (len(_labLabels) > 0):
@@ -156,12 +163,14 @@ def verifyOverwrite(outputPath):
 
 def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 	
-	# inputFile  = open(inputPath,'r')
 	outputFile = open(outputPath,'w')
+	barWidth = 36
 	
 	# Write the date and time of when the extractor was used
 	dt = datetime.now().strftime('%m/%d/%Y %I:%M:%S %p')
+	outputFile.write(bar(barWidth,'='))
 	outputFile.write(f'\nAT Report Extractor Output\nGenerated at {dt}\n')
+	outputFile.write(bar(barWidth,'='))
 
 	# Begin reading input directory
 	for fileName in os.listdir(inputPath):
@@ -206,7 +215,9 @@ def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 			outputFile.write('\n\nGrand Total,Visits,Hours,Students')
 			outputFile.write('\n' + ','.join(element))
 		elif element[0] == 'Dates':
-			outputFile.write('\n\n\n' + ' '.join(element))
+			outputFile.write('\n\n\n' + bar(barWidth))
+			outputFile.write('\n' + ' '.join(element))
+			outputFile.write('\n' + bar(barWidth))
 		else:
 			outputFile.write('\n' + ','.join(element))
 	# end of for-loop
