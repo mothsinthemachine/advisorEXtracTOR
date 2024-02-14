@@ -83,15 +83,14 @@ def printFooter():
 
 def quitProcess(reason='unknown'):
 	print(f'Sorry, I could not understand that command. The reason is {reason}.')
-	print('Please enter the path and file name to use extractor.')
-	print('Syntax:\n\n\t> python at-report-extract.py <PATH TO 4sp FILE> [OPTIONAL OUTPUT PATH]\n')
+	# print('Syntax:\n\n\t> python at-report-extract.py [optional to input directory] [optional output file name]\n')
 	printFooter()
 	quit()
 
 
 def bar(width,_symbol='-'):
-	str = ''
-	for i in range(width):
+	str = _symbol
+	for i in range(width-1):
 		str += _symbol
 	return str
 
@@ -137,19 +136,23 @@ def verifyArguments(n):
 def verifyOverwrite(outputPath):
 	if (os.path.exists(outputPath)):
 		# Verify overwriting of existing output file
-		inputStr = input(f'The output file \"{outputPath}\" already exists. Do you want to overwrite it? [y/n]: ')
-		choice = inputStr[0].lower()
+		
+		choice = ''
 		while (choice != 'n') and (choice != 'y'):
-			print("Invalid choice. Please enter Y for 'Yes' and N for 'No'...")
-			inputStr = input('The output file name already exists. Do you want to overwrite it? [y/n]: ')
+			print(f'The output file \"{outputPath}\" already exists.')
+			inputStr = input('Do you want to overwrite it? [y/n]: ')
 			choice = inputStr[0].lower()
+			# Gets to this line if invalid choice is made
+			if (choice != 'n' and choice != 'y'):
+				print("\nInvalid choice. Please enter Y for 'Yes' and N for 'No'...")
 		
 		if (choice == 'n'):
 			return False
 		
 		if (choice == 'y'):
-			print(f'Confirmed overwriting previous file \"{outputPath}\".')
+			print(f'\nConfirmed overwriting previous file \"{outputPath}\".')
 			return True
+		
 	else:
 		# Path does not exists
 		return True
@@ -227,7 +230,7 @@ def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 			outputFile.write('\n' + sep.join(element))
 	# end of for-loop
 	
-	print("Process completed successfully.")
+	print(f'\nProcess completed successfully. Output file is at \"{outputPath}\".')
 	inputFile.close()
 	outputFile.close()
 	return True
