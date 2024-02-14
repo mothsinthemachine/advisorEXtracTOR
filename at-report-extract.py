@@ -43,7 +43,8 @@ Process:
 
 Revisions:
 
-02/14/24 - Separating tasks into new functions.
+02/14/24 - Separating tasks into new functions. Formatting output file. Now can
+			input multiple files in a directory.
 
 01/24/24 - New version completed. Renamed old version to 'at-report-extract-v3.py'
 
