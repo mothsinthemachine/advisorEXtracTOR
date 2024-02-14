@@ -165,6 +165,7 @@ def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 	
 	outputFile = open(outputPath,'w')
 	barWidth = 36
+	sep = ',' # for CSV: Comma Separated Values
 	
 	# Write the date and time of when the extractor was used
 	dt = datetime.now().strftime('%m/%d/%Y %I:%M:%S %p')
@@ -179,14 +180,18 @@ def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 		for line in inputFile:
 			
 			# Record the date of the Advisortrac report
-
 			found = line.find('from')
 			if (found != -1):
 				dateStr = 'Dates ' + line[found:found+29]
 				dateList = dateStr.split()
 				totals.append(dateList)
-				continue
-				
+				continue # Nothing else is worthwhile on this line
+			
+			'''
+			These are very specific to our AdvisorTrac Reports and is not 
+			designed to work with all Reports!
+			'''
+
 			newList = list(filter(lambda str: str != '' and str != 'Students\n', line.split('\t')))
 
 			# Criteria to clean up the list
@@ -210,16 +215,16 @@ def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 	
 	for element in totals:
 		if element[0] in labLabels:
-			outputFile.write('\n\n' + element[0] + ',Visits,Hours,Students')
+			outputFile.write('\n\n' + sep.join([element[0],'Visits','Hours','Students']))
 		elif element[0] == 'Grand Total:':
-			outputFile.write('\n\nGrand Total,Visits,Hours,Students')
-			outputFile.write('\n' + ','.join(element))
+			outputFile.write('\n\n' + sep.join(['Grand Total','Visits','Hours','Students']))
+			outputFile.write('\n' + sep.join(element))
 		elif element[0] == 'Dates':
 			outputFile.write('\n\n\n' + bar(barWidth))
 			outputFile.write('\n' + ' '.join(element))
 			outputFile.write('\n' + bar(barWidth))
 		else:
-			outputFile.write('\n' + ','.join(element))
+			outputFile.write('\n' + sep.join(element))
 	# end of for-loop
 	
 	print("Process completed successfully.")

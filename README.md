@@ -6,5 +6,5 @@ Extraction tool for AdvisorTrac Reports (typically named `reportOut.4sp`).
 ## Benchmarks
 
 [x] Successfully extract data from AdvisorTrac generated report.\
-[ ] Extract data from AdvisorTrac reports in folder.
+[x] Extract data from AdvisorTrac reports in folder.
 
