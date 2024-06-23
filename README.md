@@ -2,7 +2,7 @@
 
 AdvisorTrac Report Extractor (version 3)
 
-Author: Jake Sherwood ([GitHub Profile](https://github.com/mothsinthemachine))
+Author: ([Moths in the Machine](https://github.com/mothsinthemachine))
 
 
 ## Purpose
@@ -17,7 +17,8 @@ know-how or manual entry.
 
 I wrote this code to help me with this and make data reporting from AdvisorTrac 
 easier. It's written for a specific department in a specific institution, so it 
-may not work for all.
+may not work for all. However, the algorithm is worth perserving for 
+educational purposes.
 
 
 ## Requires
@@ -50,6 +51,8 @@ may not work for all.
 
 
 ## Revisions
+
+06/23/24 - Made repo public. Added a discussion board. Updated author name in ReadMe.
 
 03/27/24 - Renamed repo from 'at-report-extract to' to 'advisorEXtracTOR' because
 			it sounds more amazing.
