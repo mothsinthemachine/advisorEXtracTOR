@@ -2,7 +2,7 @@
 
 AdvisorTrac Report Extractor (version 3)
 
-Author: ([Moths in the Machine](https://github.com/mothsinthemachine))
+Author: [Moths in the Machine](https://github.com/mothsinthemachine)
 
 
 ## Purpose
@@ -23,34 +23,37 @@ educational purposes.
 
 ## Requires
 
-- Python3 installed
+- Python3.10 or newer installed.
 
 	
 ## Process
 
 1.	Get the data from AdvisorTrac delivered in TEXT (.4sp) form and save it to 
-	the computer. Remember the location of this file.
+	the computer. Remember the location of this file. Suggestion is to use the `input` folder
+	included in the director where the extractor resides.
 
-2.	Open a command line interface. Suggestions are:
+3.	Open a command line interface. Suggestions are:
 
 	- Command Prompt (Windows)
 	- Powershell (Windows)
 	- Terminal (Windows or *nix, Mac included)
 
-3.	Use Python to run the script.
+4.	Use Python to run the script.
 
 	Possible Syntax:
 
-		python at-report-extract.py <source (required)> <destination (optional)>
+		python advisorEXtracTOR.py  <source(required)>  <destination(optional)>
 
 	or
 
-		python3 at-report-extract.py <source (required)> <destination (optional)>
+		python3 advisorEXtracTOR.py  <source(required)>  <destination(optional)>
 
-4.	Profit.
+5.	Profit. Output will default to `output.csv` if no destination is specified in previous step.
 
 
 ## Revisions
+
+06/28/24 - Corrections and clarifications made to Process steps in ReadMe.
 
 06/23/24 - Made repo public. Added a discussion board. Updated author name in ReadMe.
 
