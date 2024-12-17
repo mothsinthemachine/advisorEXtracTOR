@@ -3,7 +3,7 @@
 	AdvisorTrac Report Extractor (version 3)
 
 	Author: Jake Sherwood (MothsInTheMachine on GitHub)
-	Last Modified: Mar. 27, 2024
+	Last Modified: Dec. 17, 2024
 '''
 
 import sys
@@ -68,7 +68,7 @@ def defineKeywords(_labLabels=[]):
 	if (len(_labLabels) > 0):
 		keywords.extend(_labLabels)
 	keywords.extend(['DC Math Lab Total:','DC Writing Lab Total:','SV Math Lab Total:','SV Writing Lab Total:','Grand Total:'])
-	keywords.extend(['Chemistry Total:','CIS/Programming Total:','Math Total:','Other Total:','Other Course Tutoring Total:'])
+	keywords.extend(['Chemistry Total:','CIS/Programming Total:','Math Total:','Other Total:','Other Course Tutoring Total:','Physics Total:'])
 	keywords.extend(['Languages Total:','MS Office Total:','Reading Total:','Social Sciences Total:','Workshop Total:','Writing Total:'])
 	return keywords
 
