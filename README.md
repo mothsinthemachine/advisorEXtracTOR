@@ -1,57 +1,49 @@
 # advisorEXtracTOR
 
-AdvisorTrac Report Extractor (version 3)
+AdvisorTrac Report Extractor written in Python
 
-Author: [Moths in the Machine](https://github.com/mothsinthemachine)
-
+Authored By: [Jake Sherwood](https://github.com/mothsinthemachine)
 
 ## Purpose
 
-The purpose of this program is to take report text data from AdvisorTrac and 
-convert it into a CSV file for use with Excel.
+The purpose of this program is to extract data from AdvisorTrac reports and convert it into a CSV file.
 
-Values from these reports are delivered by either HTML (screen) or TEXT (.4sp). 
-However, to use these values in Excel requires a trained data-entry eye and 
-deep attention, making it hard to import the data. It requires extreme Excel 
-know-how or manual entry.
+Data from these reports are delivered by either HTML (screen) or TEXT (.4sp). However, importing the data to spreadsheet software was impossible, and required hours of manual entry.
 
-I wrote this code to help me with this and make data reporting from AdvisorTrac 
-easier. It's written for a specific department in a specific institution, so it 
-may not work for all. However, the algorithm is worth perserving for 
-educational purposes.
+I wrote this CLI program to make data extraction AdvisorTrac easier. It is written for a department in a specific institution, so it may not work for all. However, the algorithm is worth perserving and can be modified.
 
-
-## Requires
+## Requirements for use
 
 - Python3.10 or newer installed.
-
 	
 ## Process
 
-1.	Get the data from AdvisorTrac delivered in TEXT (.4sp) form and save it to 
-	the computer. Remember the location of this file. Suggestion is to use the `input` folder
-	included in the director where the extractor resides.
+1. Get the data from AdvisorTrac delivered in TEXT (.4sp) form and save it to the computer. Place the file into the `input` folder included in the directory where the extractor resides or store in a directory of your choosing.
 
-3.	Open a command line interface. Suggestions are:
+2. Open a CLI. Suggestions are:
+	<br>- Command Prompt or Powershell (Windows)
+	<br>- Terminal (Windows or *nix, Mac included)
 
-	- Command Prompt (Windows)
-	- Powershell (Windows)
-	- Terminal (Windows or *nix, Mac included)
+4.	Use Python to run the script. Possible syntaxes:
 
-4.	Use Python to run the script.
+```Powershell
+# Standard
+python3 advisorEXtracTOR.py  <source(required)>  <destination(optional)>
 
-	Possible Syntax:
+# Alternate
+py advisorEXtracTOR.py  <source(required)>  <destination(optional)>
 
-		python advisorEXtracTOR.py  <source(required)>  <destination(optional)>
+# Old (please verify you have Python3 and not Python2 before using this style)
+python --version
+python advisorEXtracTOR.py  <source(required)>  <destination(optional)>
+```
 
-	or
-
-		python3 advisorEXtracTOR.py  <source(required)>  <destination(optional)>
-
-5.	Profit. Output will default to `output.csv` if no destination is specified in previous step.
+5.	Profit. Output will default to `output.csv` in same directory as extractor if no destination is specified in previous step.
 
 
 ## Revisions
+
+03/09/25 - Rewritten README file.
 
 06/28/24 - Corrections and clarifications made to Process steps in ReadMe.
 
