@@ -1,4 +1,3 @@
+# Exclude any input folder and output files from runs.
 input/
 output.csv
-dev/
-versions/

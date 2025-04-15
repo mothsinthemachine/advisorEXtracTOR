@@ -1,9 +1,9 @@
 '''
-	advisorEXtracTOR
-	AdvisorTrac Report Extractor (version 3)
+advisorEXtracTOR
+AdvisorTrac Report Extractor (version 3)
 
-	Author: Jake Sherwood (MothsInTheMachine on GitHub)
-	Last Modified: Dec. 17, 2024
+Author: MothsInTheMachine on GitHub
+Last Modified: Dec. 17, 2024
 '''
 
 import sys
@@ -197,5 +197,5 @@ def processFiles(inputPath,outputPath,keywords,labLabels,totals):
 	return True
 
 
-# Call MAIN
+# Invoke MAIN
 main()
