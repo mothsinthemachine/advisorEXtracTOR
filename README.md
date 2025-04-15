@@ -2,7 +2,7 @@
 
 AdvisorTrac Report Extractor written in Python
 
-Authored By: [Jake Sherwood](https://github.com/mothsinthemachine)
+Authored By: [Moths in the Machine](https://github.com/mothsinthemachine)
 
 ## Purpose
 
