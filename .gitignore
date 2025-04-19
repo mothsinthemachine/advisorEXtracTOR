@@ -1,3 +1,6 @@
 # Exclude any input folder and output files from runs.
 input/
 output.csv
+
+# Prevent Mac's dumb file from getting in the repo.
+**/.DS_Store

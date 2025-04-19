@@ -1,0 +1,48 @@
+{
+"lab": {
+	"DC Math Lab": {
+		"reason": [
+			"Chemistry",
+			"CIS/Programming",
+			"Math",
+			"Other",
+			"Other Course Tutoring",
+			"Physics"
+		]
+	},
+	"DC Writing Lab": {
+		"reason": [
+			"CIS/Programming",
+			"Languages",
+			"Math",
+			"Other",
+			"Other Course Tutoring",
+			"Reading",
+			"Social Sciences",
+			"Workshop",
+			"Writing"
+		]
+	},
+	"SV Math Lab": {
+		"reason": [
+			"Chemistry",
+			"CIS/Programming",
+			"Math",
+			"Other",
+			"Other Course Tutoring",
+			"Physics"
+		]
+	},
+	"SV Writing Lab": {
+		"reason": [
+			"Languages",
+			"MS Office",
+			"Other",
+			"Reading",
+			"Social Sciences",
+			"Workshop",
+			"Writing"
+		]
+	}
+}
+}
