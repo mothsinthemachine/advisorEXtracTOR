@@ -1,9 +1,11 @@
 '''
 advisorEXtracTOR
-AdvisorTrac Report Extractor (version 3)
+AdvisorTrac Report Extractor 
+Version 4
 
 Author: MothsInTheMachine on GitHub
-Last Modified: Dec. 17, 2024
+Collaborators:
+Last Modified: Apr. XX, 2025
 '''
 
 import sys
@@ -14,6 +16,7 @@ from datetime import datetime
 # Define MAIN
 def main():
 	labLabels = ['DC Math Lab','DC Writing Lab','SV Math Lab','SV Writing Lab']
+    # We need to separate out these lab labels to a new module/file to manually add them in -moths
 	keywords = defineKeywords(labLabels)
 	inputPath,outputPath = verifyArguments(len(sys.argv))
 
@@ -25,7 +28,7 @@ def main():
 		exit()
 
 	
-	processFiles(inputPath, outputPath, keywords, labLabels, [])
+	processFiles(inputPath, outputPath, keywords, labLabels, []) # What did the empty array do again? -moths
 	printFooter()
 	exit()
 # End MAIN
@@ -63,6 +66,9 @@ def bar(width,_symbol='-'):
 	return str
 
 
+# There has got to be a better way of doing this part -moths
+# Perhaps we can pull in the lab labels from separate file/module and append " Total:" to it? -moths
+# We will also probably need to separate reasons from this code too and delegate that to a separate file -moths
 def defineKeywords(_labLabels=[]):
 	keywords = []
 	if (len(_labLabels) > 0):
