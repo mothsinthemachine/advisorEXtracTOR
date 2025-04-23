@@ -4,3 +4,6 @@ output.csv
 
 # Prevent Mac's dumb file from getting in the repo.
 **/.DS_Store
+
+# Do not upload test cases that I am building from scripts.
+dev/moths/gen-cases
