@@ -44,7 +44,7 @@ python advisorEXtracTOR.py  <source(required)>  <destination(optional)>
 
 | Date | Revision |
 | --- | --- |
-| 05/10/25 | Preparing repo for archival... |
+| 05/14/25 | Housecleaning. Goal is to make this project more modular for v4. |
 | 04/23/25 | Housecleaning. Moved old versions of advisorEXtracTOR to private repo. Updated README. Invited others to collaborate on v4. |
 | 03/09/25 | Rewritten README file. |
 | 06/28/24 | Corrections and clarifications made to Process steps in ReadMe. |
