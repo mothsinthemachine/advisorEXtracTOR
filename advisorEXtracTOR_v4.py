@@ -2,10 +2,8 @@
 advisorEXtracTOR
 AdvisorTrac Report Extractor 
 Version 4
-
 Author: MothsInTheMachine on GitHub
-Collaborators:
-Last Modified: Apr. XX, 2025
+Last Modified: Apr. 30, 2025
 '''
 
 import sys

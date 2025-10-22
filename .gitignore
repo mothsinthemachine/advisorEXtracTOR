@@ -1,6 +1,10 @@
-# Exclude any input folder and output files from runs.
+# Exclude input folder and default output file from runs.
 input/
 output.csv
 
-# Prevent Mac's dumb file from getting in the repo.
+# Exclude centers and reasons text files
+centers.txt
+reasons.txt
+
+# Prevent Mac's hidden Finder file from getting in the repo.
 **/.DS_Store

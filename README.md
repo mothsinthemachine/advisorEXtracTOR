@@ -15,8 +15,36 @@ I wrote this CLI program to make data extraction AdvisorTrac easier. It is writt
 ## Requirements for use
 
 - Python3.10 or newer installed.
-	
-## Process
+
+## Process for Version 5 (recommended and newest)
+
+1. Create two text files (files that end with extension `.txt`) in the same folder as the program named the following:
+
+	1. `centers.txt`: List the exact names of the centers to be extracted from the data, each on a separate line.
+
+	2. `reasons.txt`: List the exact names of the reasons to be extracted from the data, each on a separate line.
+
+2. Create an `input` folder in the same folder as the program. The extractor will be looking for this folder to extract the data from. Place your `.4sp` files in this folder. Name them appropriately if you wish to for the extraction to be ordered (ie. 1-9 or A-Z ordering).
+
+3. Run the program `advisorEXtracTOR_5.py` by double-clicking it. You may be prompted to confirm overwriting any previous `output.csv` files that are in the main directory.
+
+	- If double-clicking does not work, you can run the program using a CLI (Command Prompt or PowerShell) and entering the following command from the main directory.
+
+```PowerShell
+# Standard
+python3 advisorEXtracTOR_v5.py
+
+# Alternate if py is used as an alias of python3
+py advisorEXtracTOR_v5.py
+
+# Old (please verify you have Python3 and not Python2 before using this style)
+python --version
+python advisorEXtracTOR_v5.py
+```
+
+4. Profit. A new file named `output.csv` will appear in the main directory. If everything was done correctly, the data will be stored in this file.
+
+## Process for Version 4
 
 1. Get the data from AdvisorTrac delivered in TEXT (.4sp) form and save it to the computer. Place the file into the `input` folder included in the directory where the extractor resides or store in a directory of your choosing.
 
@@ -28,22 +56,27 @@ I wrote this CLI program to make data extraction AdvisorTrac easier. It is writt
 
 ```Powershell
 # Standard
-python3 advisorEXtracTOR.py  <source(required)>  <destination(optional)>
+python3 advisorEXtracTOR_v4.py  <source(required)>  <destination(optional)>
 
 # Alternate
-py advisorEXtracTOR.py  <source(required)>  <destination(optional)>
+py advisorEXtracTOR_v4.py  <source(required)>  <destination(optional)>
 
 # Old (please verify you have Python3 and not Python2 before using this style)
 python --version
-python advisorEXtracTOR.py  <source(required)>  <destination(optional)>
+python advisorEXtracTOR_v4.py  <source(required)>  <destination(optional)>
 ```
 
 5.	Profit. Output will default to `output.csv` in same directory as extractor if no destination is specified in previous step.
+
+## Known Issues
+
+- Only works on Windows computers. The issue is the filepaths use `\\` in a few places in the program. Will need to remedy to work on Linux systems as well.
 
 ## Revisions
 
 | Date | Revision |
 | --- | --- |
+| 10/22/25 | Version 5 released. Simplified workflow and more legible code. |
 | 09/24/25 | Resuming development. Needed for upcoming project. |
 | 05/14/25 | Housecleaning. Goal is to make this project more modular for v4. |
 | 04/23/25 | Housecleaning. Moved old versions of advisorEXtracTOR to private repo. Updated README. Invited others to collaborate on v4. |
